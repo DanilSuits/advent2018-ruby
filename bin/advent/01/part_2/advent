@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+BIN=$(dirname ${0})
+INPUT=${BIN}/../part_1/advent-01-first-input.txt
+
+cat ${INPUT} |
+# tee /dev/tty |
+${BIN}/console
+
