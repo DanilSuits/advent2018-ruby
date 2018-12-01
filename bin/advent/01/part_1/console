@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require 'advent2018/day_01_first/frequency'
+
+f = Frequency.new
+
+ARGF.each do |line|
+  f.on_line(line)
+end
+
+puts f.frequency
