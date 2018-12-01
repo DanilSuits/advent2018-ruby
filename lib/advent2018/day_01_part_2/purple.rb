@@ -1,6 +1,23 @@
 require_relative '../day_01_first/frequency'
 
 module Purple
+  def self.infinite_loop
+    # https://stackoverflow.com/a/27139962/54734
+    loop do
+      yield
+    end
+  end
+
+  def self.degenerate_loop
+    raise "Out of patience"
+  end
+
+  def self.finite_loop
+    (0..5000).each do yield end
+    # TODO: need to learn what to do here.
+    raise "Out of patience"
+  end
+  
   def self.purple(signals)
 
     f = Frequency.new
@@ -10,8 +27,7 @@ module Purple
 
     h[f.frequency] = 1
 
-    # https://stackoverflow.com/a/27139962/54734
-    loop do
+    self.finite_loop do
       signals.each do |frequency|
         f.on_line(frequency)
         # https://stackoverflow.com/a/1402764/54734
@@ -21,7 +37,5 @@ module Purple
 
       end
     end
-
-    7778
   end
 end
