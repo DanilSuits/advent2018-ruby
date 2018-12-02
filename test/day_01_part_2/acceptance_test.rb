@@ -1,6 +1,6 @@
 require 'advent2018/day_01_part_2/purple'
 
-class AcceptanceTest
+class AcceptanceTest < Minitest::Test
   def purple(signals)
     Purple.purple(signals)
   end

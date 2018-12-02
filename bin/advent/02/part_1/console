@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'advent2018/day_02_part_1/green'
+
+# https://stackoverflow.com/a/548514/54734
+puts Green.checksum(STDIN.readlines)
