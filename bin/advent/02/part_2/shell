@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+require 'advent2018/day_02_part_2/blue'
+
+# https://stackoverflow.com/a/548514/54734
+Blue.matches(STDIN.readlines) do |match|
+  puts match
+end

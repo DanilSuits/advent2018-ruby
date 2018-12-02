@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+BIN=$(dirname ${0})
+INPUT=${BIN}/../part_1/advent-02-first-input.txt
+
+sample_box_ids () {
+cat <<EOF
+abcde
+fghij
+klmno
+pqrst
+fguij
+axcye
+wvxyz
+EOF
+}
+
+advent_box_ids () {
+    cat ${INPUT}
+}
+
+box_ids () {
+  advent_box_ids
+}
+
+box_ids |
+# tee /dev/tty |
+${BIN}/shell
+
